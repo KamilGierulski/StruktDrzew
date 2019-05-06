@@ -1,0 +1,29 @@
+﻿@page
+@{
+    ViewData["Title"] = "Drzewka";
+}
+
+<link href="~/lib/vis/vis.css" rel="stylesheet" type="text/css" />
+<link href="~/lib/vis/vis-network.min.css" rel="stylesheet" type="text/css" />
+
+<script src="~/lib/vis/vis.js"></script>
+<script src="~/lib/vis/vis-network.min.js"></script>
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table" id="graphsTable">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nazwa</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+<div id="tree" class="chart"></div>
+
+<script src="js/guest-tree-poligon.js"></script>

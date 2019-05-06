@@ -1,0 +1,52 @@
+﻿@page
+@{
+    ViewData["Title"] = "Drzewka";
+}
+
+<link href="~/lib/vis/vis.css" rel="stylesheet" type="text/css" />
+<link href="~/lib/vis/vis-network.min.css" rel="stylesheet" type="text/css" />
+
+<script src="~/lib/vis/vis.js"></script>
+<script src="~/lib/vis/vis-network.min.js"></script>
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-sm-3">
+        <button type="button" class="btn btn-primary form-control" id="btnNew">Nowy</button>
+    </div>
+</div>
+
+<table class="table" id="graphsTable">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nazwa</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<div id="tree" class="chart"></div>
+
+<form class="form-horizontal">
+    <div class="form-group row">
+        <label for="name" class="col-sm-3 control-label">Nazwa węzła</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Wprowadź nazwę nowego węzła">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="graphName" class="col-sm-3 control-label">Nazwa grafu</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="graphName" name="graphName" aria-describedby="graphName" placeholder="Wprowadź nazwę nowego grafu">
+        </div>
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-primary form-control" id="btnSave">Zapisz</button>
+        </div>
+    </div>
+</form>
+
+<script src="js/tree-poligon.js"></script>
